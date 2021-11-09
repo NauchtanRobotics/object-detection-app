@@ -62,7 +62,7 @@ if clicked:
                 resp = requests.post(endpoint_url, files=files, data={"project_ref": project_identifier}),
             # get detections.ai file and accumulate the result. The accumulated file will help build marks, POI
             # when building a shape file for the project
-            print(resp[0].json()["msg1"])  # Replace key msg1 with "detections"
+            print(f"Detections in {path.name}: ", resp[0].json()["detections"])  # Replace key msg1 with "detections"
 
 # @st.cache
 # def process_image(image):
